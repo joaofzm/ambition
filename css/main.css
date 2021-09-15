@@ -34,6 +34,10 @@ form {
   line-height: 150px;
 }
 
+form ::placeholder {
+  color: rgb(0, 0, 0);
+}
+
 .logo {
   margin-left: 30%;
   height: 10%;
@@ -56,6 +60,7 @@ form {
   border: 3px solid rgb(255, 255, 255);
   border-radius: 10px;
   font-size: 20px;
+  color: white;
 }
 
 .formInput:hover {
@@ -76,10 +81,10 @@ form {
   border-radius: 40px;
   cursor: pointer;
   font-size: 30px;
-  padding: 12%;
+  padding: 7%;
   padding-left: 30%;
   padding-right: 30%;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   border: 3px solid rgb(255, 255, 255);
   transition: 0.3s;
 }
@@ -91,6 +96,6 @@ form {
   transform: scale(1.075);
   transition: 0.3s;
   border: 3px solid rgb(148, 148, 148);
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 31px;
 }
