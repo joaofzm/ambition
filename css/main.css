@@ -17,8 +17,13 @@
   height: 80%;
   width: 80%;
   background: rgba(255, 255, 255, 0.671);
-  align-items: center;
   text-align: center;
+}
+
+form {
+  display: inline-block;
+  /* border: 3px solid rgb(0, 8, 119); */
+  line-height: 150px;
 }
 
 .logo {
@@ -26,7 +31,7 @@
   height: 10%;
   width: 40%;
   background: rgb(85, 0, 0);
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 .formLabel {
@@ -37,14 +42,16 @@
 
 .formInput {
   background-color: burlywood;
-  padding: 1%;
+  padding: 7%;
   border: 3px solid yellow;
 }
 
 .button {
   background-color: crimson;
   font-size: 30px;
-  padding: 2%;
+  padding: 12%;
+  padding-left: 30%;
+  padding-right: 30%;
   color: aqua;
   border: 3px solid yellow;
 }
