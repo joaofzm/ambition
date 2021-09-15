@@ -1,0 +1,97 @@
+/* #region HP Mana Bars */
+.hpManaBar {
+  font-family: "Impact";
+  font-size: 35px;
+  font: 22;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 70px;
+  width: 15.7%;
+  height: 7.6%;
+  border: 1px solid rgb(255, 255, 255);
+  position: absolute;
+  transition: all 3s ease;
+  pointer-events: none;
+}
+
+#hpPlayer {
+  color: rgb(20, 243, 0);
+  background-color: rgba(231, 31, 31, 0.753);
+  top: 80.5%;
+  left: 58.7%;
+}
+
+#manaPlayer {
+  color: rgb(0, 47, 255);
+  background-color: rgba(0, 225, 255, 0.753);
+  top: 88.3%;
+  left: 58.7%;
+}
+
+#manaOpponent {
+  color: rgb(0, 47, 255);
+  background-color: rgba(0, 225, 255, 0.753);
+  top: 1%;
+  left: 8%;
+}
+
+#hpOpponent {
+  color: rgb(20, 243, 0);
+  background-color: rgba(231, 31, 31, 0.753);
+  top: 9%;
+  left: 8%;
+}
+/* #endregion */
+
+#passRoundButton {
+  background-color: #180046;
+  border: 1px solid #ffffff;
+  color: rgb(255, 255, 255);
+  font-family: "Impact";
+  font-size: 30px;
+  text-shadow: 8px 8px 8px #000000;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 30%;
+  line-height: 45px;
+  width: 11%;
+  height: 16%;
+  position: absolute;
+  top: 45%;
+  left: 84.5%;
+  opacity: 1;
+  transition: all 3s ease;
+  cursor: pointer;
+}
+
+#roundInfo {
+  background-color: #180046;
+  border: 1px solid #ffffff;
+  color: rgb(255, 255, 255);
+  font-family: "Impact";
+  font-size: 30px;
+  text-shadow: 8px 8px 8px #000000;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 30%;
+  line-height: 100px;
+  width: 11%;
+  height: 16%;
+  position: absolute;
+  top: 45%;
+  left: 5.5%;
+  opacity: 1;
+  transition: all 3s ease;
+}
+
+@media (max-width: 1400px) {
+  #passRoundButton,
+  #roundInfo,
+  #hpPlayer,
+  #hpOpponent,
+  #manaPlayer,
+  #manaOpponent {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}

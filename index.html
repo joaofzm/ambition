@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body bgcolor="red">
-    Teste
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>High-End</title>
+  </head>
+  <body>
+    <div class="loginContainer">
+      <div class="loginBox">
+        <div class="logo"></div>
+        <form action="/action_page.php">
+          <label class="formLabel" for="plate">Placa do veículo</label>
+          <input
+            class="formInput"
+            type="text"
+            id="plate"
+            name="plate"
+            value="AAA-1234"
+          />
+          <label class="formLabel" for="password">Senha</label>
+          <input
+            class="formInput"
+            type="password"
+            id="password"
+            name="password"
+            value="1234"
+          />
+          <input class="button" type="submit" value="Login" />
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

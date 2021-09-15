@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wings of Freedom</title>
+    <link rel="stylesheet" href="C:\Users\joao\Desktop\cg\cg5.css" />
+  </head>
+  <body onload="tittleScreen()">
+    <div id="board"></div>
+
+    <audio autoplay>
+      <source
+        src="file:///C:/Users/joao/Desktop/cg/art/sound/shingeki_no_kyojin_attack_on_titan_fight_theme_5935666973512431596.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+    <div id="playerSpellSlot"></div>
+    <div id="playerMonsterSlot1"></div>
+    <div id="playerMonsterSlot2"></div>
+    <div id="playerMonsterSlot3"></div>
+    <div id="playerMonsterSlot4"></div>
+    <div id="playerMonsterSlot5"></div>
+    <div id="playerDeck"></div>
+
+    <div id="opponentDeck"></div>
+    <div id="opponentMonsterSlot1"></div>
+    <div id="opponentMonsterSlot2"></div>
+    <div id="opponentMonsterSlot3"></div>
+    <div id="opponentMonsterSlot4"></div>
+    <div id="opponentMonsterSlot5"></div>
+    <div id="opponentSpellSlot"></div>
+
+    <div id="opponentMonsterSlot1Attacked" class="cardSlotAttacked"></div>
+    <div id="opponentMonsterSlot2Attacked" class="cardSlotAttacked"></div>
+    <div id="opponentMonsterSlot3Attacked" class="cardSlotAttacked"></div>
+    <div id="opponentMonsterSlot4Attacked" class="cardSlotAttacked"></div>
+    <div id="opponentMonsterSlot5Attacked" class="cardSlotAttacked"></div>
+    <div id="directAttackTarget">DIRECT ATTACK</div>
+
+    <div id="hpPlayer"></div>
+    <div id="manaPlayer"></div>
+
+    <div id="hpOpponent"></div>
+    <div id="manaOpponent"></div>
+
+    <div id="playerHand1" class="cardInHand"></div>
+    <div id="playerHand2" class="cardInHand"></div>
+    <div id="playerHand3" class="cardInHand"></div>
+    <div id="playerHand4" class="cardInHand"></div>
+    <div id="playerHand5" class="cardInHand"></div>
+    <div id="playerHand6" class="cardInHand"></div>
+    <div id="playerHand7" class="cardInHand"></div>
+    <div id="playerHand8" class="cardInHand"></div>
+    <div id="playerHand9" class="cardInHand"></div>
+    <div id="playerHand10" class="cardInHand"></div>
+    <div id="playerHand11" class="cardInHand"></div>
+
+    <div id="opponentHand1" class="cardInOpponentHand"></div>
+    <div id="opponentHand2" class="cardInOpponentHand"></div>
+    <div id="opponentHand3" class="cardInOpponentHand"></div>
+    <div id="opponentHand4" class="cardInOpponentHand"></div>
+    <div id="opponentHand5" class="cardInOpponentHand"></div>
+    <div id="opponentHand6" class="cardInOpponentHand"></div>
+    <div id="opponentHand7" class="cardInOpponentHand"></div>
+    <div id="opponentHand8" class="cardInOpponentHand"></div>
+    <div id="opponentHand9" class="cardInOpponentHand"></div>
+    <div id="opponentHand10" class="cardInOpponentHand"></div>
+    <div id="opponentHand11" class="cardInOpponentHand"></div>
+
+    <div id="info">
+      <div id="logoInfo">Wings of Freedom</div>
+      <div id="mute" onclick="muteUnmute()"></div>
+      <div id="screen"></div>
+      <button id="surrenderButton" onClick="window.location.reload()">
+        Surrender
+      </button>
+      <button id="rulesButton" onclick="helpButton()">Rules / Help</button>
+    </div>
+
+    <div id="rulesHelp">
+      <h1>Rules / Help</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+    </div>
+    <div id="rulesHelpX" onclick="closeHelp()">X</div>
+
+    <div id="clickedCard"></div>
+    <div id="clickedCardField"></div>
+    <div id="playCard" onclick="playCard()">PLAY</div>
+    <div id="currentRound"></div>
+    <div id="attackButton" onclick="attack()"></div>
+    <div id="passRoundButton" onclick="passRound()"></div>
+    <div id="roundAlert"></div>
+
+    <div id="youGoFirst">You'll go first!</div>
+    <div id="youGoSecond">You'll go second!</div>
+
+    <div id="playerMonster1Attack" class="statsAttack"></div>
+    <div id="playerMonster1Defense" class="statsDefense"></div>
+
+    <div id="playerMonster2Attack" class="statsAttack"></div>
+    <div id="playerMonster2Defense" class="statsDefense"></div>
+
+    <div id="playerMonster3Attack" class="statsAttack"></div>
+    <div id="playerMonster3Defense" class="statsDefense"></div>
+
+    <div id="playerMonster4Attack" class="statsAttack"></div>
+    <div id="playerMonster4Defense" class="statsDefense"></div>
+
+    <div id="playerMonster5Attack" class="statsAttack"></div>
+    <div id="playerMonster5Defense" class="statsDefense"></div>
+
+    <div id="opponentMonster1Attack" class="statsAttack"></div>
+    <div id="opponentMonster1Defense" class="statsDefense"></div>
+
+    <div id="opponentMonster2Attack" class="statsAttack"></div>
+    <div id="opponentMonster2Defense" class="statsDefense"></div>
+
+    <div id="opponentMonster3Attack" class="statsAttack"></div>
+    <div id="opponentMonster3Defense" class="statsDefense"></div>
+
+    <div id="opponentMonster4Attack" class="statsAttack"></div>
+    <div id="opponentMonster4Defense" class="statsDefense"></div>
+
+    <div id="opponentMonster5Attack" class="statsAttack"></div>
+    <div id="opponentMonster5Defense" class="statsDefense"></div>
+
+    <div id="opponent1AttackAnimation"></div>
+    <div id="opponent2AttackAnimation"></div>
+    <div id="opponent3AttackAnimation"></div>
+    <div id="opponent4AttackAnimation"></div>
+    <div id="opponent5AttackAnimation"></div>
+
+    <div id="player1AttackAnimation"></div>
+    <div id="player2AttackAnimation"></div>
+    <div id="player3AttackAnimation"></div>
+    <div id="player4AttackAnimation"></div>
+    <div id="player5AttackAnimation"></div>
+    <div id="directAttackAnimation">DIRECT ATTACK</div>
+    <div id="directAttackPlayerAnimation">DIRECT ATTACK</div>
+
+    <div id="coin">
+      <div id="front"></div>
+      <div id="back"></div>
+    </div>
+
+    <div id="youWin">YOU WIN !</div>
+    <div id="youLose">YOU LOSE !</div>
+
+    <div id="playerMonsterSlot1Attacked" class="cardSlotAttacked"></div>
+    <div id="playerMonsterSlot2Attacked" class="cardSlotAttacked"></div>
+    <div id="playerMonsterSlot3Attacked" class="cardSlotAttacked"></div>
+    <div id="playerMonsterSlot4Attacked" class="cardSlotAttacked"></div>
+    <div id="playerMonsterSlot5Attacked" class="cardSlotAttacked"></div>
+
+    <div id="startScreen"></div>
+    <div id="logo"></div>
+    <button id="startButton" onclick="start()">Start</button>
+
+    <script src="C:\Users\joao\Desktop\cg\cg5.js"></script>
+  </body>
+</html>

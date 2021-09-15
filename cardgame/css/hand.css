@@ -1,0 +1,160 @@
+/* #region player hand */
+.cardInHandPlayer {
+  background-size: cover;
+  width: 7.1%;
+  height: 22%;
+  transform: scale(1);
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 75.5%;
+  pointer-events: auto;
+  transition: transform 0.5s;
+}
+#playerHand1 {
+  left: 3%;
+  z-index: 11;
+  background-image: url("../art/15\ meter\ 1.jpg");
+}
+#playerHand2 {
+  left: 8%;
+  z-index: 10;
+  background-image: url("../art/8\ meter\ 1.jpg");
+}
+#playerHand3 {
+  left: 13%;
+  z-index: 9;
+  background-image: url("../art/beast.jpg");
+}
+#playerHand4 {
+  left: 18%;
+  z-index: 8;
+  background-image: url("../art/Serum\ 1.jpg");
+}
+#playerHand5 {
+  left: 23%;
+  z-index: 7;
+}
+#playerHand6 {
+  left: 28%;
+  z-index: 6;
+}
+#playerHand7 {
+  left: 32%;
+  z-index: 5;
+}
+#playerHand8 {
+  left: 37%;
+  z-index: 4;
+}
+#playerHand9 {
+  left: 42%;
+  z-index: 3;
+}
+#playerHand10 {
+  left: 47%;
+  z-index: 2;
+}
+#playerHand11 {
+  left: 52%;
+  z-index: 1;
+}
+
+#playerHand1:hover,
+#playerHand2:hover,
+#playerHand3:hover,
+#playerHand4:hover,
+#playerHand5:hover,
+#playerHand6:hover,
+#playerHand7:hover,
+#playerHand8:hover,
+#playerHand9:hover,
+#playerHand10:hover,
+#playerHand11:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
+#playerHand1:active,
+#playerHand2:active,
+#playerHand3:active,
+#playerHand4:active,
+#playerHand5:active,
+#playerHand6:active,
+#playerHand7:active,
+#playerHand8:active,
+#playerHand9:active,
+#playerHand10:active,
+#playerHand11:active {
+  transform: scale(1.2);
+  transition: transform 0.5s;
+  z-index: 20;
+}
+/* #endregion */
+
+/* #region opponent hand */
+.cardInHandOpponent {
+  background-image: url("../art/cover.jpg");
+  transform: rotate(180deg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 7.1%;
+  height: 22%;
+  position: absolute;
+}
+
+#opponentHand1 {
+  left: 60%;
+  opacity: 1;
+}
+
+#opponentHand2 {
+  left: 55%;
+  opacity: 1;
+}
+
+#opponentHand3 {
+  left: 50%;
+  opacity: 1;
+}
+
+#opponentHand4 {
+  left: 45%;
+  opacity: 1;
+}
+
+#opponentHand5 {
+  left: 40%;
+  opacity: 1;
+}
+
+#opponentHand6 {
+  left: 35%;
+  opacity: 0;
+}
+
+#opponentHand7 {
+  left: 30%;
+  opacity: 0;
+}
+
+#opponentHand8 {
+  left: 25%;
+  opacity: 0;
+}
+
+#opponentHand9 {
+  left: 20%;
+  opacity: 0;
+}
+
+#opponentHand10 {
+  left: 15%;
+  opacity: 0;
+}
+
+#opponentHand11 {
+  left: 10%;
+  opacity: 0;
+}
+/* #endregion */

@@ -1,0 +1,1354 @@
+/* #region body board generals */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(248, 0, 153, 0.486);
+  background-size: cover;
+  background-image: url("file:///C:/Users/joao/Desktop/cg/art/giphy.webp");
+}
+
+#board {
+  /* background-image: url("file:///C:/Users/joao/Desktop/cg/art/36625.png"); */
+  background-color: rgba(11, 83, 33, 0.637);
+  width: 1038px;
+  height: 450px;
+  background-size: cover;
+  border: 5px solid rgb(255, 255, 255);
+  margin: left;
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+
+#startScreen {
+  background-image: url("file:///C:/Users/joao/Desktop/cg/art/giphy.webp");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  margin: left;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 20;
+  transition: all 5s ease;
+  pointer-events: none;
+}
+
+#logo {
+  background-image: url("file:///C:/Users/joao/Desktop/cg/art/final/WOF.png");
+  width: 800px;
+  height: 722px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: left;
+  position: absolute;
+  top: 0px;
+  left: 540px;
+  z-index: 20;
+  /* former 1 */
+  opacity: 0;
+  /* former2 */
+  transition: all 10s ease;
+  pointer-events: none;
+}
+/* #endregion */
+
+/* #region coin toss and roundAlert */
+#youGoFirst {
+  font-family: "Impact";
+  font-size: 80px;
+  color: rgb(63, 55, 173);
+  font: 48;
+  text-shadow: 8px 8px 8px #ff0000;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  width: 800px;
+  height: 100px;
+  position: absolute;
+  top: 370px;
+  left: 700px;
+  opacity: 0;
+  transition: all 3s ease;
+  pointer-events: none;
+  z-index: 20;
+}
+
+#youGoSecond {
+  font-family: "Impact";
+  font-size: 80px;
+  color: rgb(243, 227, 0);
+  font: 48;
+  text-shadow: 8px 8px 8px #073800;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  width: 800px;
+  height: 100px;
+  position: absolute;
+  top: 370px;
+  left: 750px;
+  opacity: 0;
+  transition: all 3s ease;
+  pointer-events: none;
+  z-index: 20;
+}
+
+#coin {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: all 2s ease;
+  top: 320px;
+  left: 620px;
+  transform: rotateX(0deg);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* #coin:hover{
+    transform: rotateX(3600deg);
+    } */
+
+#front {
+  background-image: url("file:///C:/Users/joao/Desktop/cg/art/final/COIN%20SIDE%20A.png");
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  pointer-events: none;
+  z-index: 20;
+}
+
+#back {
+  background-image: url("file:///C:/Users/joao/Desktop/cg/art/final/COIN%20SIDE%20B.png");
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  pointer-events: none;
+  z-index: 20;
+}
+
+#roundAlert {
+  font-family: "Impact";
+  font-size: 200px;
+  color: rgb(30, 114, 153);
+  font: 48;
+  text-shadow: 8px 8px 8px #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  width: 800px;
+  height: 200px;
+  position: absolute;
+  top: 375px;
+  left: 320px;
+  opacity: 0;
+  transition: all 3s ease;
+  pointer-events: none;
+  z-index: 20;
+}
+/* #endregion */
+
+/* #region buttons */
+#clickedCard {
+  background-color: #071805;
+  border: 0.1em solid #ffffff;
+  font-family: "Impact";
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  text-shadow: 8px 8px 8px #000000;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  width: 136.5px;
+  height: 40px;
+  position: absolute;
+  top: 610px;
+  left: 40px;
+  opacity: 0;
+  transition: all 3s ease;
+  pointer-events: none;
+}
+
+#clickedCardField {
+  background-color: #471515;
+  border: 0.1em solid #ffffff;
+  font-family: "Impact";
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  text-shadow: 8px 8px 8px #000000;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  width: 136.5px;
+  height: 40px;
+  position: absolute;
+  top: 435px;
+  left: 40px;
+  opacity: 0;
+  transition: all 3s ease;
+  pointer-events: none;
+}
+
+#playCard {
+  background-color: #194d12;
+  border: 0.1em solid #ffffff;
+  color: rgb(255, 255, 255);
+  font-family: "Impact";
+  font-size: 35px;
+  text-shadow: 8px 8px 8px #000000;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  width: 136.5px;
+  height: 100px;
+  position: absolute;
+  top: 510px;
+  left: 40px;
+  opacity: 0;
+  transition: all 3s ease;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+#attackButton {
+  background-color: #cf1818;
+  border: 0.1em solid #ffffff;
+  color: rgb(255, 255, 255);
+  font-family: "Impact";
+  font-size: 35px;
+  text-shadow: 8px 8px 8px #000000;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  width: 136.5px;
+  height: 100px;
+  position: absolute;
+  top: 335px;
+  left: 40px;
+  opacity: 0;
+  transition: all 3s ease;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+#passRoundButton {
+  background-color: #194d12;
+  border: 0.1em solid #ffffff;
+  color: rgb(255, 255, 255);
+  font-family: "Impact";
+  font-size: 30px;
+  text-shadow: 8px 8px 8px #000000;
+  text-align: center;
+  /* vertical-align: middle;
+    line-height: 100px;   */
+  width: 136.5px;
+  height: 100px;
+  position: absolute;
+  top: 200px;
+  left: 40px;
+  opacity: 0;
+  transition: all 3s ease;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+#startButton {
+  background-color: #194d12;
+  border: 0.2em solid #ffffff;
+  color: rgb(255, 255, 255);
+  padding: 10px 100px;
+  text-align: center;
+  font-size: 22px;
+  position: absolute;
+  top: 750px;
+  left: 810px;
+  cursor: pointer;
+  z-index: 21;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 3s ease;
+}
+
+#currentRound {
+  background-color: rgba(11, 83, 33, 0.637);
+  border: 0.1em solid #ffffff;
+  color: rgb(255, 255, 255);
+  width: 180px;
+  height: 60px;
+  text-align: center;
+  font: impact;
+  font-size: 30px;
+  position: absolute;
+  top: 400px;
+  left: 1254px;
+  vertical-align: middle;
+  line-height: 55px;
+  opacity: 0;
+  transition: all 3s ease;
+  pointer-events: none;
+}
+/* #endregion */
+
+/* #region card slots */
+
+#playerSpellSlot:active,
+#playerMonsterSlot1:active,
+#playerMonsterSlot2:active,
+#playerMonsterSlot3:active,
+#playerMonsterSlot4:active,
+#playerMonsterSlot5:active {
+  transform: scale(1.2);
+  transition: transform 0.5s;
+  z-index: 20;
+}
+
+#playerSpellSlot {
+  width: 97.5px;
+  height: 143px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(12, 65, 15, 0.753);
+  position: absolute;
+  top: 475px;
+  left: 280px;
+  pointer-events: none;
+}
+#playerMonsterSlot1 {
+  width: 97.5px;
+  height: 143px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(32, 29, 31, 0.753);
+  position: absolute;
+  top: 475px;
+  left: 410px;
+}
+#playerMonsterSlot2 {
+  width: 97.5px;
+  height: 143px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(32, 29, 31, 0.753);
+  position: absolute;
+  top: 475px;
+  left: 540px;
+}
+
+#playerMonsterSlot3 {
+  width: 97.5px;
+  height: 143px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(32, 29, 31, 0.753);
+  position: absolute;
+  top: 475px;
+  left: 670px;
+}
+
+#playerMonsterSlot4 {
+  width: 97.5px;
+  height: 143px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(32, 29, 31, 0.753);
+  position: absolute;
+  top: 475px;
+  left: 800px;
+}
+
+#playerMonsterSlot5 {
+  width: 97.5px;
+  height: 143px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(32, 29, 31, 0.753);
+  position: absolute;
+  top: 475px;
+  left: 930px;
+}
+
+#opponentSpellSlot:active,
+#opponentMonsterSlot1:active,
+#opponentMonsterSlot2:active,
+#opponentMonsterSlot3:active,
+#opponentMonsterSlot4:active,
+#opponentMonsterSlot5:active {
+  transform: scale(1.2) rotate(180deg);
+  transition: transform 0.5s;
+  z-index: 20;
+}
+
+#opponentSpellSlot {
+  pointer-events: none;
+  width: 97.5px;
+  height: 143px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(12, 65, 15, 0.753);
+  position: absolute;
+  top: 231px;
+  left: 1060px;
+  transform: rotate(180deg);
+}
+
+#opponentMonsterSlot1 {
+  width: 97.5px;
+  height: 143px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(32, 29, 31, 0.753);
+  position: absolute;
+  top: 231px;
+  left: 410px;
+  transform: rotate(180deg);
+}
+
+#opponentMonsterSlot2 {
+  width: 97.5px;
+  height: 143px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(32, 29, 31, 0.753);
+  position: absolute;
+  top: 231px;
+  left: 540px;
+  transform: rotate(180deg);
+}
+#opponentMonsterSlot3 {
+  width: 97.5px;
+  height: 143px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(32, 29, 31, 0.753);
+  position: absolute;
+  top: 231px;
+  left: 670px;
+  transform: rotate(180deg);
+}
+
+#opponentMonsterSlot4 {
+  width: 97.5px;
+  height: 143px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(32, 29, 31, 0.753);
+  position: absolute;
+  top: 231px;
+  left: 800px;
+  transform: rotate(180deg);
+}
+
+#opponentMonsterSlot5 {
+  width: 97.5px;
+  height: 143px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(32, 29, 31, 0.753);
+  position: absolute;
+  top: 231px;
+  left: 930px;
+  transform: rotate(180deg);
+}
+/* #endregion */
+
+/* #region cardSlotsAttacked */
+.cardSlotAttacked {
+  width: 97.5px;
+  height: 143px;
+  border: 4px solid rgb(255, 0, 0);
+  background-size: cover;
+  position: absolute;
+  background-image: url("file:///C:/Users/joao/Desktop/cg/art/final/sword%20png.png");
+  pointer-events: none;
+}
+
+#playerMonsterSlot1Attacked {
+  top: 475px;
+  left: 410px;
+  opacity: 0;
+}
+
+#playerMonsterSlot2Attacked {
+  top: 475px;
+  left: 540px;
+  opacity: 0;
+}
+
+#playerMonsterSlot3Attacked {
+  top: 475px;
+  left: 670px;
+  opacity: 0;
+}
+
+#playerMonsterSlot4Attacked {
+  top: 475px;
+  left: 800px;
+  opacity: 0;
+}
+
+#playerMonsterSlot5Attacked {
+  top: 475px;
+  left: 930px;
+  opacity: 0;
+}
+
+#opponentMonsterSlot1Attacked {
+  top: 231px;
+  left: 410px;
+  opacity: 0;
+}
+
+#opponentMonsterSlot2Attacked {
+  top: 231px;
+  left: 540px;
+  opacity: 0;
+}
+
+#opponentMonsterSlot3Attacked {
+  top: 231px;
+  left: 670px;
+  opacity: 0;
+}
+
+#opponentMonsterSlot4Attacked {
+  top: 231px;
+  left: 800px;
+  opacity: 0;
+}
+
+#opponentMonsterSlot5Attacked {
+  top: 231px;
+  left: 930px;
+  opacity: 0;
+}
+
+#directAttackTarget {
+  top: 80px;
+  left: 515px;
+  opacity: 0;
+  width: 400px;
+  height: 100px;
+  border: 4px solid rgb(255, 255, 255);
+  background-size: cover;
+  position: absolute;
+  font-family: "Impact";
+  font-size: 42px;
+  color: rgb(255, 255, 255);
+  text-shadow: 8px 8px 8px #000000;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+  z-index: 55;
+  transition: all 3s ease;
+}
+
+/* #endregion */
+
+/* #region Deck Covers */
+#playerDeck {
+  width: 97.5px;
+  height: 143px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(32, 29, 31, 0.753);
+  position: absolute;
+  top: 497px;
+  left: 1110px;
+  font-family: "Impact";
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+  font: 22;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 143px;
+  pointer-events: none;
+}
+
+#opponentDeck {
+  width: 97.5px;
+  height: 143px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(32, 29, 31, 0.753);
+  position: absolute;
+  top: 210px;
+  left: 230px;
+  font-family: "Impact";
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+  font: 22;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 143px;
+  pointer-events: none;
+}
+
+/* #endregion */
+
+/* #region HP Mana Bars */
+#hpPlayer {
+  font-family: "Impact";
+  font-size: 35px;
+  color: rgb(20, 243, 0);
+  font: 22;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 70px;
+  width: 300px;
+  height: 70px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(231, 31, 31, 0.753);
+  position: absolute;
+  top: 700px;
+  left: 1050px;
+  opacity: 0;
+  transition: all 3s ease;
+  pointer-events: none;
+}
+
+#manaPlayer {
+  font-family: "Impact";
+  font-size: 35px;
+  color: rgb(0, 47, 255);
+  font: 22;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 70px;
+  width: 300px;
+  height: 70px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(0, 225, 255, 0.753);
+  position: absolute;
+  top: 772px;
+  left: 1050px;
+  opacity: 0;
+  transition: all 3s ease;
+  pointer-events: none;
+}
+
+#hpOpponent {
+  font-family: "Impact";
+  font-size: 35px;
+  color: rgb(20, 243, 0);
+  font: 22;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 70px;
+  width: 300px;
+  height: 70px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(231, 31, 31, 0.753);
+  position: absolute;
+  top: 80px;
+  left: 38px;
+  opacity: 0;
+  transition: all 3s ease;
+  pointer-events: none;
+}
+
+#manaOpponent {
+  font-family: "Impact";
+  font-size: 35px;
+  color: rgb(0, 47, 255);
+  font: 22;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 70px;
+  width: 300px;
+  height: 70px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-color: rgba(0, 225, 255, 0.753);
+  position: absolute;
+  top: 8px;
+  left: 38px;
+  opacity: 0;
+  transition: all 3s ease;
+  pointer-events: none;
+}
+/* #endregion */
+
+/* #region info */
+
+#info {
+  background-color: rgba(11, 83, 33, 0.637);
+  background-image: url("");
+  background-size: contain;
+  width: 400px;
+  height: 800px;
+  border: 1px solid rgb(255, 255, 255);
+  margin: left;
+  position: absolute;
+  top: 70px;
+  left: 1450px;
+}
+#screen {
+  /* background-image: url("file:///C:/Users/joao/Desktop/cg/art/final/armored%20titan.jpg"); */
+  background-size: cover;
+  width: 336px;
+  height: 488px;
+  background-color: rgba(32, 29, 31, 0.753);
+  border: 1px solid rgb(255, 255, 255);
+  margin: left;
+  position: absolute;
+  top: 100px;
+  left: 32px;
+}
+
+#logoInfo {
+  color: rgb(255, 255, 255);
+  font-family: "Impact";
+  font-size: 35px;
+  text-shadow: 8px 8px 8px #000000;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  width: 400px;
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 1;
+  transition: all 3s ease;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+#surrenderButton {
+  background-color: #501111;
+  border: 0.1em solid #ffffff;
+  color: rgb(255, 255, 255);
+  padding: 10px 50px;
+  text-align: center;
+  font-size: 22px;
+  position: absolute;
+  top: 630px;
+  left: 105px;
+  cursor: pointer;
+}
+
+#rulesButton {
+  background-color: #000000;
+  border: 0.1em solid #ffffff;
+  color: rgb(255, 255, 255);
+  padding: 10px 50px;
+  text-align: center;
+  font-size: 22px;
+  position: absolute;
+  top: 720px;
+  left: 95px;
+  cursor: pointer;
+}
+
+#mute {
+  background-size: cover;
+  background-image: url("file:///C:/Users/joao/Desktop/cg/art/final/mute.png");
+  background-color: #00fff275;
+  border: 0.1em solid #ffffff;
+  color: rgb(23, 104, 20);
+  padding: 25px 25px;
+  text-align: center;
+  font-size: 22px;
+  position: absolute;
+  top: 23px;
+  left: 7px;
+  cursor: pointer;
+}
+
+/* #endregion */
+
+/* #region player hand */
+#playerHand1:active,
+#playerHand2:active,
+#playerHand3:active,
+#playerHand4:active,
+#playerHand5:active,
+#playerHand6:active,
+#playerHand7:active,
+#playerHand8:active,
+#playerHand9:active,
+#playerHand10:active,
+#playerHand11:active {
+  transform: scale(1.2);
+  transition: transform 0.5s;
+  z-index: 20;
+}
+.cardInHand {
+  background-size: cover;
+  width: 136.5px;
+  height: 200.2px;
+  transform: scale(1);
+  position: absolute;
+  opacity: 1;
+}
+#playerHand1 {
+  top: 680px;
+  left: 40px;
+  z-index: 11;
+  pointer-events: auto;
+}
+#playerHand2 {
+  top: 680px;
+  left: 120px;
+  z-index: 10;
+  pointer-events: auto;
+}
+#playerHand3 {
+  top: 680px;
+  left: 200px;
+  z-index: 9;
+  pointer-events: auto;
+}
+#playerHand4 {
+  top: 680px;
+  left: 280px;
+  z-index: 8;
+  pointer-events: auto;
+}
+#playerHand5 {
+  top: 680px;
+  left: 360px;
+  z-index: 7;
+  pointer-events: auto;
+}
+#playerHand6 {
+  top: 680px;
+  left: 440px;
+  z-index: 6;
+  pointer-events: auto;
+}
+#playerHand7 {
+  top: 680px;
+  left: 520px;
+  z-index: 5;
+  pointer-events: auto;
+}
+#playerHand8 {
+  top: 680px;
+  left: 600px;
+  z-index: 4;
+  pointer-events: auto;
+}
+#playerHand9 {
+  top: 680px;
+  left: 680px;
+  z-index: 3;
+  pointer-events: auto;
+}
+#playerHand10 {
+  top: 680px;
+  left: 760px;
+  z-index: 2;
+  pointer-events: auto;
+}
+#playerHand11 {
+  top: 680px;
+  left: 840px;
+  z-index: 1;
+  pointer-events: auto;
+}
+/* #endregion */
+
+/* #region opponent hand */
+.cardInOpponentHand {
+  background-image: url("file:///C:/Users/joao/Desktop/cg/art/final/sleeve.png");
+  width: 136.5px;
+  height: 200.2px;
+  background-size: cover;
+  background-color: rgb(255, 0, 170);
+  position: absolute;
+  transform: rotate(180deg);
+}
+
+#opponentHand1 {
+  top: -27.8px;
+  left: 1211.5px;
+  opacity: 0;
+}
+
+#opponentHand2 {
+  top: -27.8px;
+  left: 1131.5px;
+  opacity: 0;
+}
+
+#opponentHand3 {
+  top: -27.8px;
+  left: 1051.5px;
+  opacity: 0;
+}
+
+#opponentHand4 {
+  top: -27.8px;
+  left: 971.5px;
+  opacity: 0;
+}
+
+#opponentHand5 {
+  top: -27.8px;
+  left: 891.5px;
+  opacity: 0;
+}
+
+#opponentHand6 {
+  top: -27.8px;
+  left: 811.5px;
+  opacity: 0;
+}
+
+#opponentHand7 {
+  top: -27.8px;
+  left: 731.5px;
+  opacity: 0;
+}
+
+#opponentHand8 {
+  top: -27.8px;
+  left: 651.5px;
+  opacity: 0;
+}
+
+#opponentHand9 {
+  top: -27.8px;
+  left: 571.5px;
+  opacity: 0;
+}
+
+#opponentHand10 {
+  top: -27.8px;
+  left: 491.5px;
+  opacity: 0;
+}
+
+#opponentHand11 {
+  top: -27.8px;
+  left: 411.5px;
+  opacity: 0;
+}
+/* #endregion */
+
+/* #region stats divs */
+
+.statsAttack {
+  background-color: rgba(102, 16, 16, 0.637);
+  background-image: url("");
+  background-size: cover;
+  width: 48px;
+  height: 30px;
+  border: 1px solid rgb(255, 255, 255);
+  margin: left;
+  position: absolute;
+  pointer-events: none;
+  font-family: "Impact";
+  font-size: 22px;
+  color: rgb(255, 0, 0);
+  text-shadow: 8px 8px 8px #000000;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+  opacity: 1;
+  transition: all 3s ease;
+  z-index: 2;
+}
+
+.statsDefense {
+  background-color: rgba(4, 37, 8, 0.637);
+  background-image: url("");
+  background-size: cover;
+  width: 48px;
+  height: 30px;
+  border: 1px solid rgb(255, 255, 255);
+  margin: left;
+  position: absolute;
+  pointer-events: none;
+  font-family: "Impact";
+  font-size: 22px;
+  color: rgb(43, 255, 0);
+  text-shadow: 8px 8px 8px #000000;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+  opacity: 1;
+  transition: all 3s ease;
+  z-index: 2;
+}
+
+#playerMonster1Defense {
+  top: 444px;
+  left: 411px;
+}
+#playerMonster1Attack {
+  top: 444px;
+  left: 458.5px;
+}
+
+#playerMonster2Defense {
+  top: 444px;
+  left: 541px;
+}
+#playerMonster2Attack {
+  top: 444px;
+  left: 588.5px;
+}
+
+#playerMonster3Defense {
+  top: 444px;
+  left: 671px;
+}
+#playerMonster3Attack {
+  top: 444px;
+  left: 718.5px;
+}
+
+#playerMonster4Defense {
+  top: 444px;
+  left: 801px;
+}
+#playerMonster4Attack {
+  top: 444px;
+  left: 848.5px;
+}
+
+#playerMonster5Defense {
+  top: 444px;
+  left: 931px;
+}
+#playerMonster5Attack {
+  top: 444px;
+  left: 978.5px;
+}
+
+#opponentMonster1Defense {
+  top: 375px;
+  left: 458.5px;
+}
+#opponentMonster1Attack {
+  top: 375px;
+  left: 411px;
+}
+
+#opponentMonster2Defense {
+  top: 375px;
+  left: 588.5px;
+}
+#opponentMonster2Attack {
+  top: 375px;
+  left: 541px;
+}
+
+#opponentMonster3Defense {
+  top: 375px;
+  left: 718.5px;
+}
+#opponentMonster3Attack {
+  top: 375px;
+  left: 671px;
+}
+
+#opponentMonster4Defense {
+  top: 375px;
+  left: 848.5px;
+}
+#opponentMonster4Attack {
+  top: 375px;
+  left: 801px;
+}
+
+#opponentMonster5Defense {
+  top: 375px;
+  left: 978.5px;
+}
+#opponentMonster5Attack {
+  top: 375px;
+  left: 931px;
+}
+
+/* #endregion */
+
+/* #region opponent attack animations */
+
+#directAttackAnimation {
+  top: 80px;
+  left: 515px;
+  width: 400px;
+  height: 100px;
+  background-color: rgb(255, 0, 0);
+  border: 4px solid rgb(0, 0, 0);
+  background-size: cover;
+  position: absolute;
+  font-family: "Impact";
+  font-size: 42px;
+  color: rgb(0, 0, 0);
+  text-shadow: 8px 8px 8px #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+  z-index: 55;
+  pointer-events: none;
+  opacity: 0;
+}
+
+#opponent1AttackAnimation {
+  width: 97.5px;
+  height: 143px;
+  border: 6px solid rgb(182, 22, 22);
+  background-size: cover;
+  background-color: rgba(255, 0, 0, 0.555);
+  position: absolute;
+  top: 231px;
+  left: 410px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+#opponent2AttackAnimation {
+  width: 97.5px;
+  height: 143px;
+  border: 6px solid rgb(182, 22, 22);
+  background-size: cover;
+  background-color: rgba(255, 0, 0, 0.555);
+  position: absolute;
+  top: 231px;
+  left: 540px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+#opponent3AttackAnimation {
+  width: 97.5px;
+  height: 143px;
+  border: 6px solid rgb(182, 22, 22);
+  background-size: cover;
+  background-color: rgba(255, 0, 0, 0.555);
+  position: absolute;
+  top: 231px;
+  left: 670px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+#opponent4AttackAnimation {
+  width: 97.5px;
+  height: 143px;
+  border: 6px solid rgb(182, 22, 22);
+  background-size: cover;
+  background-color: rgba(255, 0, 0, 0.555);
+  position: absolute;
+  top: 231px;
+  left: 800px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+#opponent5AttackAnimation {
+  width: 97.5px;
+  height: 143px;
+  border: 6px solid rgb(182, 22, 22);
+  background-size: cover;
+  background-color: rgba(255, 0, 0, 0.555);
+  position: absolute;
+  top: 231px;
+  left: 930px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* #directAttackAnimation{
+xxt
+} */
+/* #endregion */
+
+/* #region player attack animations */
+
+#directAttackPlayerAnimation {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.589);
+  position: absolute;
+  font-family: "Impact";
+  font-size: 200px;
+  color: rgb(0, 0, 0);
+  text-shadow: 8px 8px 8px #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 800px;
+  z-index: 55;
+  pointer-events: none;
+  opacity: 0;
+}
+
+#player1AttackAnimation {
+  width: 97.5px;
+  height: 143px;
+  border: 6px solid rgb(182, 22, 22);
+  background-size: cover;
+  background-color: rgba(255, 0, 0, 0.555);
+  position: absolute;
+  top: 475px;
+  left: 410px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+#player2AttackAnimation {
+  width: 97.5px;
+  height: 143px;
+  border: 6px solid rgb(182, 22, 22);
+  background-size: cover;
+  background-color: rgba(255, 0, 0, 0.555);
+  position: absolute;
+  top: 475px;
+  left: 540px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+#player3AttackAnimation {
+  width: 97.5px;
+  height: 143px;
+  border: 6px solid rgb(182, 22, 22);
+  background-size: cover;
+  background-color: rgba(255, 0, 0, 0.555);
+  position: absolute;
+  top: 475px;
+  left: 670px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+#player4AttackAnimation {
+  width: 97.5px;
+  height: 143px;
+  border: 6px solid rgb(182, 22, 22);
+  background-size: cover;
+  background-color: rgba(255, 0, 0, 0.555);
+  position: absolute;
+  top: 475px;
+  left: 800px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+#player5AttackAnimation {
+  width: 97.5px;
+  height: 143px;
+  border: 6px solid rgb(182, 22, 22);
+  background-size: cover;
+  background-color: rgba(255, 0, 0, 0.555);
+  position: absolute;
+  top: 475px;
+  left: 930px;
+  pointer-events: none;
+  opacity: 0;
+}
+/* #endregion */
+
+/* #region You Win You Lose */
+
+#youWin {
+  background-size: cover;
+  width: 1300px;
+  height: 500px;
+  margin: left;
+  position: absolute;
+  top: 200px;
+  left: 250px;
+  color: rgb(0, 60, 255);
+  font-family: "Impact";
+  font-size: 300px;
+  text-shadow: 8px 8px 8px #000000;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 500px;
+  transition: all 3s ease;
+  pointer-events: none;
+  z-index: 55;
+  opacity: 0;
+}
+
+#youLose {
+  background-size: cover;
+  width: 1300px;
+  height: 500px;
+  margin: left;
+  position: absolute;
+  top: 200px;
+  left: 250px;
+  color: rgb(255, 0, 0);
+  font-family: "Impact";
+  font-size: 300px;
+  text-shadow: 8px 8px 8px #000000;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 500px;
+  transition: all 3s ease;
+  pointer-events: none;
+  z-index: 55;
+  opacity: 0;
+}
+
+/* #endregion */
+
+/* #region rules help */
+
+#rulesHelp {
+  background-color: #000000;
+  border: 0.1em solid #ffffff;
+  color: rgb(255, 255, 255);
+  font-family: "Impact";
+  font-size: 35px;
+  text-shadow: 8px 8px 8px #000000;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  width: 1300px;
+  height: 800px;
+  position: absolute;
+  top: 70px;
+  left: 100px;
+  opacity: 0;
+  transition: all 2s ease;
+  cursor: pointer;
+  pointer-events: none;
+  z-index: 100;
+}
+
+#rulesHelpX {
+  background-color: rgba(11, 83, 33, 0.637);
+  border: 0.1em solid #ffffff;
+  color: rgb(255, 255, 255);
+  font-family: "Impact";
+  font-size: 70px;
+  text-shadow: 8px 8px 8px #000000;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 70px;
+  left: 1300px;
+  opacity: 0;
+  transition: all 2s ease;
+  cursor: pointer;
+  pointer-events: none;
+  z-index: 101;
+}
+
+/* #endregion */

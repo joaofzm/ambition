@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wings of Freedom</title>
+    <link rel="stylesheet" href="./css/cardgame.css" />
+    <link rel="stylesheet" href="./css/info.css" />
+    <link rel="stylesheet" href="./css/buttons.css" />
+    <link rel="stylesheet" href="./css/hand.css" />
+  </head>
+  <body>
+    <div class="board">
+      <div id="passRoundButton">END<br />TURN</div>
+      <div id="roundInfo">Round: 6</div>
+
+      <div class="opponentBoard">
+        <ul class="boardZoneUl" id="opponentBoardUl">
+          <li class="boardZoneLi deckZone" id="opponentDeckZone"></li>
+          <li class="boardZoneLi mainZone" id="opponentMainZone5">
+            <div id="opponentMonster5Attack" class="statsAttack"></div>
+            <div id="opponentMonster5Defense" class="statsDefense"></div>
+          </li>
+          <li class="boardZoneLi mainZone" id="opponentMainZone4">
+            <div id="opponentMonster4Attack" class="statsAttack"></div>
+            <div id="opponentMonster4Defense" class="statsDefense"></div>
+          </li>
+          <li class="boardZoneLi mainZone" id="opponentMainZone3">
+            <div id="opponentMonster3Attack" class="statsAttack"></div>
+            <div id="opponentMonster3Defense" class="statsDefense"></div>
+          </li>
+          <li class="boardZoneLi mainZone" id="opponentMainZone2">
+            <div id="opponentMonster2Attack" class="statsAttack"></div>
+            <div id="opponentMonster2Defense" class="statsDefense"></div>
+          </li>
+          <li class="boardZoneLi mainZone" id="opponentMainZone1">
+            <div id="opponentMonster1Attack" class="statsAttack"></div>
+            <div id="opponentMonster1Defense" class="statsDefense"></div>
+          </li>
+          <li class="boardZoneLi spellZone" id="opponentSpellZone"></li>
+        </ul>
+      </div>
+      <div class="playerBoard">
+        <ul class="boardZoneUl" id="playerBoardUl">
+          <li class="boardZoneLi spellZone" id="playerSpellZone"></li>
+          <li class="boardZoneLi mainZone" id="playerMainZone1">
+            <div id="playerMonster1Attack" class="statsAttack"></div>
+            <div id="playerMonster1Defense" class="statsDefense"></div>
+          </li>
+          <li class="boardZoneLi mainZone" id="playerMainZone2">
+            <div id="playerMonster2Attack" class="statsAttack"></div>
+            <div id="playerMonster2Defense" class="statsDefense"></div>
+          </li>
+          <li class="boardZoneLi mainZone" id="playerMainZone3">
+            <div id="playerMonster3Attack" class="statsAttack"></div>
+            <div id="playerMonster3Defense" class="statsDefense"></div>
+          </li>
+          <li class="boardZoneLi mainZone" id="playerMainZone4">
+            <div id="playerMonster4Attack" class="statsAttack"></div>
+            <div id="playerMonster4Defense" class="statsDefense"></div>
+          </li>
+          <li class="boardZoneLi mainZone" id="playerMainZone5">
+            <div id="playerMonster5Attack" class="statsAttack"></div>
+            <div id="playerMonster5Defense" class="statsDefense"></div>
+          </li>
+          <li class="boardZoneLi deckZone" id="playerDeckZone"></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hpManaBar" id="hpPlayer">80</div>
+    <div class="hpManaBar" id="manaPlayer">6</div>
+
+    <div class="hpManaBar" id="hpOpponent">100</div>
+    <div class="hpManaBar" id="manaOpponent">5</div>
+
+    <div id="playerHand1" class="cardInHandPlayer"></div>
+    <div id="playerHand2" class="cardInHandPlayer"></div>
+    <div id="playerHand3" class="cardInHandPlayer"></div>
+    <div id="playerHand4" class="cardInHandPlayer"></div>
+    <div id="playerHand5" class="cardInHandPlayer"></div>
+    <div id="playerHand6" class="cardInHandPlayer"></div>
+    <div id="playerHand7" class="cardInHandPlayer"></div>
+    <div id="playerHand8" class="cardInHandPlayer"></div>
+    <div id="playerHand9" class="cardInHandPlayer"></div>
+    <div id="playerHand10" class="cardInHandPlayer"></div>
+    <div id="playerHand11" class="cardInHandPlayer"></div>
+
+    <div id="opponentHand1" class="cardInHandOpponent"></div>
+    <div id="opponentHand2" class="cardInHandOpponent"></div>
+    <div id="opponentHand3" class="cardInHandOpponent"></div>
+    <div id="opponentHand4" class="cardInHandOpponent"></div>
+    <div id="opponentHand5" class="cardInHandOpponent"></div>
+    <div id="opponentHand6" class="cardInHandOpponent"></div>
+    <div id="opponentHand7" class="cardInHandOpponent"></div>
+    <div id="opponentHand8" class="cardInHandOpponent"></div>
+    <div id="opponentHand9" class="cardInHandOpponent"></div>
+    <div id="opponentHand10" class="cardInHandOpponent"></div>
+    <div id="opponentHand11" class="cardInHandOpponent"></div>
+
+    <div id="info">
+      <div id="logoInfo">Wings of Freedom</div>
+      <div id="mute"></div>
+      <div id="screen"></div>
+      <button id="surrenderButton" onClick="window.location.reload()">
+        Surrender
+      </button>
+      <button id="rulesButton">Rules / Help</button>
+    </div>
+    <script src="./js/new.js"></script>
+  </body>
+</html>
