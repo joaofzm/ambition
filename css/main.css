@@ -61,6 +61,7 @@ form ::placeholder {
   border-radius: 10px;
   font-size: 16px;
   color: white;
+  transition: 0.3s;
 }
 
 .formInput:hover {
@@ -71,7 +72,6 @@ form ::placeholder {
   transition: 0.3s;
   border: 3px solid rgb(148, 148, 148);
   color: white;
-  font-size: 20px;
 }
 
 .button {
